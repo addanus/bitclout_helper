@@ -27,9 +27,9 @@ I'm using cloutini.com as the sample domain - replace with your own.
 
       `email="cert@cloutini.com"`
 
-    - replace all example.org except the last one in app.conf - place these 3 in here - use spaces - no commas
+    - replace all example.org except the last one in app.conf - place these domains in here using spaces - no commas
 
-      `domains=(cert.cloutini.com cloutini.com www.cloutini.com api.cloutini.com)`
+      `domains=(cloutini.com www.cloutini.com api.cloutini.com)`
 
 
 4. find all files with example.org and replace with your domain
@@ -50,13 +50,13 @@ I'm using cloutini.com as the sample domain - replace with your own.
 
 6. use this to run a generic web server! 
 
-    `# comment/replace this line in init-letsencrypt.sh`
+    ```
+    # comment/replace this line in init-letsencrypt.sh    
+        #docker-compose up --force-recreate -d nginx    
     
-    `#docker-compose up --force-recreate -d nginx`
-    
-    `# replace it with this`
-    
-    `docker stop web; docker run -it --rm -d -p 80:80 --name web -v $PWD/data/certbot/www/:/usr/share/nginx/html nginx;`
+    # replace it with this    
+        docker stop web; docker run -it --rm -d -p 80:80 --name web -v $PWD/data/certbot/www/:/usr/share/nginx/html nginx;
+    ```
 
 
 7. run init-letsencrypt to add the multiple certs
@@ -64,7 +64,7 @@ I'm using cloutini.com as the sample domain - replace with your own.
     `./init-letsencrypt.sh # respond with y to replace if asked`
 
 
-8. edit and replace the last example.org with you domain -> cloutini.com
+8. edit and replace the last example.org with your domain -> cloutini.com
   
     `nano ./data/nginx/app.conf`
 
