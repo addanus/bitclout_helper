@@ -85,4 +85,4 @@ I'm using cloutini.com as the sample domain - replace with your own.
     - https://cloutini.com/
 
 
-Bonus: Your turn. Cloutini actually has a unique config and there wasn't enough time to properly check all the steps above from end to end. So be sure to submit a pull request - or reach out at [bitclout.com/u/Addanus](bitclout.com/u/Addanus) or [Discord](https://discord.com/invite/bitclout)
+Bonus: Your turn. Cloutini actually has a unique config and there wasn't enough time to properly check all the steps above from end to end. So be sure to submit a pull request - or reach out on Bitclout [Addanus](https://bitclout.com/u/Addanus) or [Discord](https://discord.com/invite/bitclout)
