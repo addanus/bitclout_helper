@@ -38,9 +38,9 @@ I'm using cloutini.com as the sample domain - replace with your own.
 
       `nano ./data/nginx/app.conf`
       
-    - keep the last example.org for now
+    - keep the last `proxy_pass example.org` for now (proly)
         
-    - the file should look like [app.conf](app.conf)
+    - see [app.conf](app.conf)
               
 
 5. bring down nginx so that port 80 is available
@@ -64,10 +64,12 @@ I'm using cloutini.com as the sample domain - replace with your own.
     `./init-letsencrypt.sh # respond with y to replace if asked`
 
 
-8. edit and replace the last example.org with your domain -> cloutini.com
+8. edit and replace the last example.org with http://frontend:8080;
   
     `nano ./data/nginx/app.conf`
-
+   
+    - the final file should look like [app.conf](app.conf)
+              
 
 9. bring nginx back up and check that the site is up - now on SSL
 
