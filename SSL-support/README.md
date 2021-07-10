@@ -71,24 +71,15 @@ I'm using cloutini.com as the sample domain - replace with your own.
     - the final file should look like [app.conf](app.conf)
               
 
-9. bring nginx back up and check that the site is up - now on SSL
-
-    `docker start nginx # or: docker start $(docker ps -aq) # or: docker-compose up -d`
-
-    - https://cloutini.com/
-
-10. Add the cert bot stuff to the main docker file for bitclout - see [docker-compose-sample.yml](docker-compose-sample.yml). 
-
-    - recheck the site after re-running the build + deploy
+9. Add the cert bot stuff to the main docker file for bitclout - see [docker-compose-sample.yml](docker-compose-sample.yml). 
 
       `docker-compose build`
 
       `docker-compose down`
 
-      `docker-compose up -d`
+      `docker-compose up -d # can add the yml file using: -f docker-compose.dev.yml`
+
+
+10. after bringing everything up again, check that the site is up - now on SSL
 
     - https://cloutini.com/
-
-
-
-                
